@@ -91,7 +91,8 @@ public class ScreenLocker extends CordovaPlugin {
                     @Override
                     public void run() {
                         PowerManager powerManager = (PowerManager) cordova.getActivity().getSystemService(Context.POWER_SERVICE);
-                        PowerManager.WakeLock wakeLock = powerManager.newWakeLock((PowerManager.SCREEN_DIM_WAKE_LOCK), "TAG");
+                        PowerManager.WakeLock wakeLock = powerManager.newWakeLock((PowerManager.SCREEN_DIM_WAKE_LOCK
+                                | PowerManager.ACQUIRE_CAUSES_WAKEUP), "TAG");
                         if(wakeLock.isHeld()) {
                             wakeLock.release();
                         }
