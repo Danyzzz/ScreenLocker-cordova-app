@@ -1,26 +1,17 @@
 # Cordova Screen Locker Plugin
 The plugin helps you to lock and unlock device screen programmatically.
 
-#Supported Platforms
-
-The plugin version 0.1 supports only 
-Android (SDK >=7)
-
-Other platforms will be added in new versions of plugin
-
-#Installation
-
-cordova plugin add https://github.com/kitolog/cordova-plugin-screen-locker.git
-
+Thanks to kitolog for original project!
+This is a different version for me and my test.
 
 #Sample
 
-var successCallback = function(){
+function successCallback(){
   console.log('success');
   //do some staff
 };
 
-var errorCallback = function(e){
+function errorCallback(e){
   console.log('error');
   console.log(e);
 };
